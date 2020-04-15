@@ -50,12 +50,12 @@ class MinHeap():
         value_checked = self.heap_list[self.count]
         current_index = self.count
         parent_value = self.heap_list[self.parent_idx(current_index)]
-        while value_checked < parent_value:
+        while current_index > 1:
             parent_idx = self.parent_idx(current_index)
             self.heap_list[parent_idx] = value_checked
             self.heap_list[current_index] = parent_value
             current_index = parent_idx
-            value_checked = parent_value
+            value_checked = self.heap_list[parent_idx]
             parent_value = self.heap_list[self.parent_idx(current_index)]
 
     def heapify_down(self):
@@ -69,15 +69,17 @@ class MinHeap():
             self.heap_list[self.smaller_child_idx(current_index)] = parent_value
             current_index = self.heap_list[self.smaller_child_idx(current_index)]
 #test cases
-# minheap = MinHeap()
-# minheap.add(4)
-# minheap.add(10)
-# minheap.add(15)
-# minheap.add(20)
-# print(minheap.heap_list)
-# minheap.add(8)
-# print(minheap.heap_list)
-# print(minheap.retrieve_min())
-# print(minheap.heap_list)
-# print(minheap.retrieve_min())
-# print(minheap.heap_list)
+minheap = MinHeap()
+minheap.add(4)
+minheap.add(10)
+minheap.add(15)
+minheap.add(20)
+print(minheap.heap_list)
+minheap.add(8)
+print(minheap.heap_list)
+print(minheap.retrieve_min())
+print(minheap.heap_list)
+print(minheap.retrieve_min())
+print(minheap.heap_list)
+minheap.add(1)
+print(minheap.heap_list)
