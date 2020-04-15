@@ -65,4 +65,4 @@ class HashMap():
 # map.remove("4")
 # map.assign("5", 7)
 # print(map.map)
-# print(map.retrieve("3"))gi
+# print(map.retrieve("3"))
