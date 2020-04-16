@@ -8,7 +8,7 @@ class LinkedList:
             self.list_length += 1
 
     def get_head_node(self):
-        return self.head_node
+         return self.head_node
 
     def add_new_head(self, value):
         new_head = Node(value, self.head_node)
@@ -53,6 +53,11 @@ class LinkedList:
             previous_node = current_node
             current_node = current_node.get_link()
         return str(amount_deleted) + " Nodes deleted"
+
+def func():
+    
+
+
 #test cases
 # ll = LinkedList(4) 
 # ll.add_new_head(8)
